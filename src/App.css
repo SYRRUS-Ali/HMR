@@ -1,0 +1,99 @@
+/* General Root Styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #121212; /* Dark background for the root */
+  color: #e4e4e4; /* Light text color */
+  font-family: "Inter", sans-serif;
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease-in-out, transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Hover effect for the logo */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* React logo hover effect */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Logo Spin Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for links */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Styling */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight hover lift effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+}
+
+/* Text Styling for the 'Read the Docs' Link */
+.read-the-docs {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #61dafb; /* Bright blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .logo {
+    height: 5em;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .read-the-docs {
+    font-size: 0.9em; /* Adjust text size */
+  }
+}
+
+/* Utility Classes for Dark Mode */
+.bg-dark {
+  background-color: #1e1e1e;
+}
+
+.text-light {
+  color: #e4e4e4;
+}
